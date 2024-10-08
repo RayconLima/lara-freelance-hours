@@ -17,8 +17,8 @@ Antes de começar a usar este projeto, é necessário ter o seguinte configurado
 - Docker e Docker-Compose
 
 ## Funcionalidades
-- Produtos
-- Categoria de produto
+- Projetos
+- Propostas por projeto
 
 ## Atividades
 - [X]  - Fundamentos do PHP e do Laravel
@@ -41,8 +41,10 @@ git clone https://github.com/RayconLima/lara-freelance-hours.git
 cd lara-freelance-hours
 ```
 
-3. Crie um arquivo `.env` na raiz do projeto e configure-o com as informações do seu ambiente, incluindo as credenciais do banco de dados. 
-
+3. Copie o arquivo `.env` na raiz do projeto a partir do arquivo .env.example para configurar em seguida as informações do seu ambiente, incluindo as credenciais do banco de dados. 
+```
+cp .env .env.example
+```
 4. Inicie o servidor de desenvolvimento com os containers do docker. usando o comando pela primeira vez
 ```
 docker-compose up -d
@@ -75,4 +77,14 @@ php artisan migrate
 
 ```
 php artisan db:seed
+```
+
+### Fora do container
+8. Instale as dependências do node:
+```
+npm install
+```
+9. Iniciando o servidor de desenvolvimento para o Tailwind
+```
+npm run dev
 ```
