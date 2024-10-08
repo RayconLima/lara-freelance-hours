@@ -1,4 +1,1 @@
-<div>
-    {{-- Stop trying to control. --}}
-    componente livewire proposals
-</div>
+<x-proposals.index :proposals="$project->proposals" />
