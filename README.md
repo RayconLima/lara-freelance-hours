@@ -22,7 +22,7 @@ Antes de começar a usar este projeto, é necessário ter o seguinte configurado
 
 ## Atividades
 - [X]  - Fundamentos do PHP e do Laravel
-- [ ]  - Funcionalidades
+- [x]  - Funcionalidades
 - [ ]  - Finalização da aplicação
 
 ## Instalação
@@ -32,7 +32,7 @@ Siga as etapas abaixo para configurar o projeto em seu ambiente local:
 1. Clone este repositório para sua máquina local:
 
 ```
-git clone https://github.com/RayconBatista/lara-freelance-hours.git
+git clone https://github.com/RayconLima/lara-freelance-hours.git
 ```
 
 2. Navegue até o diretório do projeto:
