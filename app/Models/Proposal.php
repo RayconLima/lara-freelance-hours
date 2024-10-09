@@ -5,11 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Notifications\Notifiable;
 
 class Proposal extends Model
 {
     /** @use HasFactory<\Database\Factories\ProposalFactory> */
-    use HasFactory;
+    use HasFactory, Notifiable;
 
     protected $fillable = [
         'email',

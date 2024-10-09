@@ -5,6 +5,8 @@ namespace App\Livewire\Proposals;
 use App\Actions\ArrangePositions;
 use App\Models\Project;
 use App\Models\Proposal;
+use App\Notifications\LostClassification;
+use App\Notifications\NewProposal;
 use Illuminate\Support\Facades\DB;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
@@ -41,6 +43,8 @@ class Create extends Component
             $this->arrangePositions($proposal);
         });
 
+        $this->project->author->notify(new NewProposal($this->project));
+
 
         $this->dispatch('proposal::created');
 
@@ -63,6 +67,7 @@ class Create extends Component
             $oProposal = Proposal::find($otherProposal->id);
             
             $oProposal->update(['position_status' => 'down']);
+            $oProposal->notify(new LostClassification($this->project));
         }
 
         ArrangePositions::run($proposal->project_id);
