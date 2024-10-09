@@ -22,7 +22,7 @@ Antes de começar a usar este projeto, é necessário ter o seguinte configurado
 
 ## Atividades
 - [X]  - Fundamentos do PHP e do Laravel
-- [x]  - Funcionalidades
+- [X]  - Funcionalidades
 - [ ]  - Finalização da aplicação
 
 ## Instalação
@@ -30,13 +30,11 @@ Antes de começar a usar este projeto, é necessário ter o seguinte configurado
 Siga as etapas abaixo para configurar o projeto em seu ambiente local:
 
 1. Clone este repositório para sua máquina local:
-
 ```
 git clone https://github.com/RayconLima/lara-freelance-hours.git
 ```
 
 2. Navegue até o diretório do projeto:
-
 ```
 cd lara-freelance-hours
 ```
@@ -57,24 +55,21 @@ docker-compose exec app bash
 
 ### Dentro do container
 6. Instale as dependências do Composer com o comando:
-
 ```
 composer install
 ```
 
 5. Gere a chave de aplicativo Laravel:
-
 ```
 php artisan key:generate
 ```
-6. Execute as migrações do banco de dados para criar as tabelas necessárias:
 
+6. Execute as migrações do banco de dados para criar as tabelas necessárias:
 ```
 php artisan migrate
 ```
 
 7. Se necessário, execute os *seeders* para preencher o banco de dados com dados de exemplo:
-
 ```
 php artisan db:seed
 ```
@@ -84,7 +79,11 @@ php artisan db:seed
 ```
 npm install
 ```
+
 9. Iniciando o servidor de desenvolvimento para o Tailwind
 ```
 npm run dev
 ```
+
+## Entity Relationship Diagram
+[DB Diagram](https://dbdiagram.io/d/freelancer_hours-67052bc6fb079c7ebdbd025e)
