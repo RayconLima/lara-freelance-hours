@@ -14,7 +14,9 @@ class Proposal extends Model
     protected $fillable = [
         'email',
         'hours',
-        'project_id'
+        'project_id',
+        'position', 
+        'position_status'
     ];
 
     public function project(): BelongsTo

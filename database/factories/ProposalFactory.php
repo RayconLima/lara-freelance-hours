@@ -21,6 +21,7 @@ class ProposalFactory extends Factory
             'email'         => fake()->safeEmail(),
             'hours'         => fake()->numberBetween(1, 120),
             'project_id'    => Project::factory(),
+            'position'      => null,
         ];
     }
 }
