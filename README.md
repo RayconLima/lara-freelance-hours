@@ -23,7 +23,7 @@ Antes de começar a usar este projeto, é necessário ter o seguinte configurado
 ## Atividades
 - [X]  - Fundamentos do PHP e do Laravel
 - [X]  - Funcionalidades
-- [ ]  - Finalização da aplicação
+- [X]  - Finalização da aplicação
 
 ## Instalação
 
