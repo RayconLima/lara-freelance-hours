@@ -61,8 +61,12 @@ services:
             - lara-freelance-hours
     # queue
     queue:
-        image: especializati/laravel9-app
+        build: .
         restart: unless-stopped
+        command:
+            - "bash"
+            - "-c"
+            - "php artisan queue:work"
         volumes:
             - ./:/var/www
         depends_on:

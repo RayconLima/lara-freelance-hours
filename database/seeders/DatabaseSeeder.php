@@ -19,17 +19,7 @@ class DatabaseSeeder extends Seeder
         User::query()->inRandomOrder()->limit(10)->get()->each(function (User $user) {
             $project = Project::factory()->create(['created_by' => $user->id]);
             Proposal::factory()->count(random_int(4, 45))->create(['project_id' => $project->id]);
-            // DB::update("
-            //     with RankedProposals as (
-            //         select id, row_number() over(order by hours asc) as p
-            //         from proposals
-            //         where project_id = ?
-            //     )
-            //     update proposals
-            //     set position = (select p from RankedProposals where proposals.id = RankedProposals.id)
-            //     where project_id = ?",
-            //     [$project->id, $project->id]
-            // );
+
             ArrangePositions::run($project->id);
         });
     }
