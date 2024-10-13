@@ -11,3 +11,13 @@ Route::get('/', [ProjectController::class, 'index'])->name('projects.index');
 Route::get('/anunciar-projeto', [ProjectController::class, 'create'])->name('projects.create');
 Route::get('/projeto/{project}', [ProjectController::class, 'show'])->name('projects.show');
 Route::get('como-funciona', AboutController::class)->name('about');
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
