@@ -13,6 +13,8 @@
 <x-ui.navbar/>
 <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full py-[40px]">
     {{ $slot }}
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </main>
 </body>
 </html>
