@@ -39,4 +39,14 @@ class Project extends Model
     {
         return $this->hasMany(Proposal::class);
     }
+
+    public static function search($keyword)
+    {
+        return static::query()->when($keyword, function ($query) use ($keyword) {
+            $query->where('title', 'LIKE', '%' . $keyword . '%');
+        });
+        // return static::query()->where(function ($query) use ($keyword) {
+        //     $query->where('title', 'LIKE', '%' . $keyword . '%');
+        // });
+    }
 }

@@ -41,5 +41,6 @@
         @stack('modals')
 
         @livewireScripts
+        {{-- @livewireScriptConfig --}}
     </body>
 </html>

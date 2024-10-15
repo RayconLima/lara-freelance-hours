@@ -3,19 +3,22 @@
 namespace App\Livewire\Admin;
 
 use App\Models\Project;
-use Livewire\Attributes\Computed;
 use Livewire\Component;
 
 class Projects extends Component
 {
+    public string $search = '';
+
     public function render()
     {
-        return view('livewire.admin.projects');
+        return view('livewire.admin.projects.index', [
+            'projects' => Project::where('title', 'LIKE', "%{$this->search}%")->get(),
+        ]);
     }
-
-    #[Computed()]
-    public function projects() 
+    
+    public function destroy(Project $project)
     {
-        return Project::query()->inRandomOrder()->get();
+        $project->delete();
+        return redirect()->route('admin.projects.index');
     }
 }

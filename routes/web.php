@@ -21,5 +21,5 @@ Route::middleware([
     Route::get('admin/projetos', [AdminProjectController::class, 'index'])->name('admin.projects.index');
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
-    })->name('dashboard');
+    })->name('admin.dashboard');
 });
