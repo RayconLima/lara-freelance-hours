@@ -1,14 +1,16 @@
 <?php
 
-namespace App\Livewire\Admin;
+namespace App\Livewire\Admin\Projects;
 
 use App\Models\Project;
+use Livewire\Attributes\On;
 use Livewire\Component;
 
-class Projects extends Component
+class Index extends Component
 {
     public string $search = '';
 
+    #[On('project::created')]
     public function render()
     {
         return view('livewire.admin.projects.index', [
