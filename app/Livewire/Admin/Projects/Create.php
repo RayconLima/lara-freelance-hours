@@ -44,7 +44,5 @@ class Create extends Component
         $this->modal = false;
 
         session()->flash('message', 'Projeto criado com sucesso!');
-
-        return redirect()->route('admin.projects.index');
     }
 }
