@@ -47,8 +47,8 @@
                 <label for="default" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tecnologias</label>
                 <select multiple wire:model="tech_stack" id="default" class="w-full bg-[#1E1E2C] text-white p-2 focus:outline-none focus:ring-0 border border-[#1E1E2C]">
                     <option class="text-[14px] text-[#C3C3D1]" selected>Selecione uma opção</option>
-                    @foreach (App\Enums\TechnologyEnum::cases() as $technology)
-                        <option class="text-[14px] text-[#C3C3D1]" value="{{ $technology->value }}">{{ $technology->name }}</option>
+                    @foreach ($technologies as $technology)
+                        <option class="text-[14px] text-[#C3C3D1]" value="{{ $technology->id }}">{{ $technology->label }}</option>
                     @endforeach
                 </select>
 

@@ -3,8 +3,9 @@
 namespace App\Livewire\Admin\Projects;
 
 use App\Models\Project;
-use Livewire\Attributes\Rule;
 use Livewire\Component;
+use App\Models\Technology;
+use Livewire\Attributes\Rule;
 
 class Create extends Component
 {
@@ -24,20 +25,22 @@ class Create extends Component
 
     public function render()
     {
-        return view('livewire.admin.projects.create');
+        $technologies = Technology::all();
+        return view('livewire.admin.projects.create', compact('technologies'));
     }
 
     public function save()
     {
         $this->validate();
 
-        Project::create([
+        $project = Project::create([
             'title'         => $this->title,
             'description'   => $this->description,
-            'tech_stack'    => $this->tech_stack,
             'ends_at'       => $this->ends_at,
             'created_by'    => auth()->user()->id,
         ]);
+
+        $project->technologies()->attach($this->tech_stack);
 
         $this->dispatch('project::created');
 

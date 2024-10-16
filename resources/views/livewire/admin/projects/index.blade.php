@@ -38,9 +38,10 @@
           {{ $project->status }}
         </td>
         <td class="px-6 py-4">
-          {{ implode(', ', $project->tech_stack) }}
+          {{ $project->technologies->pluck('label')->implode(', ') }}
         </td>
-        <td class="px-6 py-4">
+        <td class="px-6 py-4 flex justify-between">
+          <livewire:admin.projects.update :$project />
           <button 
             type="button"
             wire:click="destroy({{ $project->id }})"
