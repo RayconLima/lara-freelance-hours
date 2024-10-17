@@ -27,10 +27,9 @@
 
     <div class="py-4 space-y-4">
         <div class="uppercase font-bold text-[#8C8C9A] text-[12px]">Tecnologias</div>
-        <div class="flex gap-[8px] items-center pb-2">
-            {{-- {{ $project->tech_stack }} --}}
-            @foreach($project->tech_stack as $tech)
-                <x-ui.tech :icon="$tech" :text="$tech"/>
+        <div class="flex gap-[8px] items-center pb-2 flex-wrap">
+            @foreach($project->technologies as $tech)
+                <x-ui.tech :icon="$tech->key" :text="$tech->key" />
             @endforeach
         </div>
     </div>
@@ -47,7 +46,7 @@
                     {{ $project->author->name }}
                 </div>
                 <div class="flex items-center space-x-[4px]">
-                    @foreach(range(1, $project->author->stars) as $star)
+                    @foreach(range(1, $project->author->rating) as $rating)
                         <x-ui.icons.star class="h-[14px]"/>
                     @endforeach
                 </div>

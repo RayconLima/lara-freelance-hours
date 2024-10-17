@@ -11,6 +11,7 @@ class Show extends Component
 
     public function render()
     {
-        return view('livewire.projects.show');
+        $project = Project::with('technologies')->findOrFail($this->project->id);
+        return view('livewire.projects.show', compact('project'));
     }
 }

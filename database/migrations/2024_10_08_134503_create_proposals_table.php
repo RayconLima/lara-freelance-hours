@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('email');
             $table->unsignedSmallInteger('hours');
-            $table->foreignIdFor(Project::class)->constrained();
+            $table->foreignIdFor(Project::class)->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

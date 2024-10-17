@@ -38,7 +38,7 @@
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Imagem -->
             <div class="flex items-center justify-center">
-                <img src="https://via.placeholder.com/500" alt="Imagem Clientes" class="rounded-lg shadow-md">
+                <img src="/screenshots/project_manager.png" alt="Página de gerenciamento de projeto" class="rounded-lg shadow-md">
             </div>
             <!-- Texto -->
             <div>
