@@ -27,6 +27,7 @@ class Index extends Component
     
     public function destroy(Project $project)
     {
+        $project->technologies()->detach();
         $project->delete();
         $this->dispatch('project::saved');
         return redirect()->route('admin.projects.index');

@@ -18,7 +18,7 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('admin/projetos', [AdminProjectController::class, 'index'])->name('admin.projects.index');
+    Route::get('admin/projetos', AdminProjectController::class)->name('admin.projects.index');
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     })->name('admin.dashboard');
