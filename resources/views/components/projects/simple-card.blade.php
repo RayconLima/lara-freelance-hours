@@ -27,7 +27,7 @@
 
     <div class="py-4 space-y-4">
         <div class="uppercase font-bold text-[#8C8C9A] text-[12px]">Tecnologias</div>
-        <div class="flex gap-[8px] items-center pb-2">
+        <div class="flex gap-[8px] items-center pb-2 flex-wrap">
             @foreach($project->technologies as $tech)
                 <x-ui.tech :icon="$tech->key" :text="$tech->key" />
             @endforeach
