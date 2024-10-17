@@ -64,4 +64,11 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public static function search($keyword)
+    {
+        return static::query()->when($keyword, function ($query) use ($keyword) {
+            $query->where('name', 'LIKE', '%' . $keyword . '%');
+        });
+    }
 }
