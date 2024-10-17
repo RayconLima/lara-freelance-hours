@@ -29,7 +29,7 @@
         <div class="uppercase font-bold text-[#8C8C9A] text-[12px]">Tecnologias</div>
         <div class="flex gap-[8px] items-center pb-2">
             @foreach($project->technologies as $tech)
-                <x-ui.tech :icon="$tech->key" :text="$tech->key"/>
+                <x-ui.tech :icon="$tech->key" :text="$tech->key" />
             @endforeach
         </div>
     </div>

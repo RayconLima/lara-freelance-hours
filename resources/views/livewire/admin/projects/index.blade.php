@@ -12,14 +12,17 @@
       <th scope="row" class="px-6 py-3">  
         Autor
       </th>
-      <th scope="row" class="px-6 py-3">  
-        Data de encerramento
-      </th>
       <th scope="row" class="px-6 py-3 flex justify-center">  
         Status
       </th>
       <th scope="row" class="px-6 py-3">  
         Tecnologias
+      </th>
+      <th scope="row" class="px-6 py-3">  
+        Publicação
+      </th>
+      <th scope="row" class="px-6 py-3">  
+        Encerramento
       </th>
       <th scope="row" class="px-6 py-3"></th>
     </tr>
@@ -33,14 +36,17 @@
         <td class="px-6 py-4">
           {{ $project->author->name }}
         </td>
-        <td class="px-6 py-4">
-          {{ $project->created_at->diffForHumans() }}
-        </td>
         <td class="px-8 py-4 whitespace-nowrap flex justify-center">
           <x-projects.status :status="$project->status"/>
         </td>
         <td class="px-6 py-4">
           {{ $project->technologies->pluck('label')->implode(', ') }}
+        </td>
+        <td class="px-6 py-4">
+          {{ $project->created_at->diffForHumans() }}
+        </td>
+        <td class="px-6 py-4">
+          {{ $project->ends_at->diffForHumans() }}
         </td>
         <td class="px-6 py-4 flex justify-between">
           <livewire:admin.projects.update :$project />
