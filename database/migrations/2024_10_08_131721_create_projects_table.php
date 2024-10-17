@@ -18,7 +18,6 @@ return new class extends Migration
             $table->text('description');
             $table->datetime('ends_at');
             $table->string('status')->default('open');
-            // $table->json('tech_stack');
             $table->foreignIdFor(User::class, 'created_by')->constrained('users');
             $table->timestamps();
         });
