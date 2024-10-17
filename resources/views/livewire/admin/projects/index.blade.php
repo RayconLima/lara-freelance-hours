@@ -6,14 +6,14 @@
   <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
       <tr>
+        <th scope="row" class="px-6 py-3 flex justify-center">  
+          Status
+        </th>
         <th scope="row" class="px-6 py-3">  
           Título
         </th>
         <th scope="row" class="px-6 py-3">  
           Autor
-        </th>
-        <th scope="row" class="px-6 py-3 flex justify-center">  
-          Status
         </th>
         <th scope="row" class="px-6 py-3">  
           Tecnologias
@@ -30,14 +30,14 @@
     <tbody>
       @foreach($this->projects as $project)
         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" wire:key="{{ $project->id }}">
+          <td class="px-8 py-4 whitespace-nowrap">
+            <x-projects.status class="flex item-center justify-center" :status="$project->status"/>
+          </td>
           <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">  
             {{ $project->title }}
           </th>
           <td class="px-6 py-4">
             {{ $project->author->name }}
-          </td>
-          <td class="px-8 py-4 whitespace-nowrap flex justify-center">
-            <x-projects.status :status="$project->status"/>
           </td>
           <td class="px-6 py-4">
             {{ $project->technologies->pluck('label')->implode(', ') }}
