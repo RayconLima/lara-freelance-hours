@@ -21,24 +21,22 @@
                         {{ $message }}
                     </div>
                     @enderror
-
                 </div>
 
 
-                <div class="w-1/3 gap-2 flex flex-col">
+                <div class="w-2/3 gap-2 flex flex-col">
                     <label class="text-[14px] text-[#C3C3D1]">Horas</label>
                     <div class="flex" x-data="{ hours: @entangle('hours') }">
                         <button type="button" class="bg-[#1E1E2C] hover:bg-[#313145] transition duration-300 ease-in-out text-[#C3C3D1] py-2 px-3 text-3xl" @click="hours--">-</button>
-                        <input wire:model="hours" type="number" class="bg-[#1E1E2C] text-white py-2 pl-3 w-[40px] font-bold focus:outline-none focus:ring-0 border border-[#1E1E2C] focus:ring-blue-500" />
+                        <input wire:model="hours" type="number" class="bg-[#1E1E2C] text-white py-2 pl-3 w-full flex-1 font-bold focus:outline-none focus:ring-0 border border-[#1E1E2C] focus:ring-blue-500" />
                         <button type="button" class="bg-[#1E1E2C] hover:bg-[#313145] transition duration-300 ease-in-out text-[#C3C3D1] py-2 px-3 text-3xl" @click="hours++">+</button>
                     </div>
 
                     @error('hours')
-                    <div class="text-red-600 mt-1 text-sm">
-                        {{ $message }}
-                    </div>
+                        <div class="text-red-600 mt-1 text-sm">
+                            {{ $message }}
+                        </div>
                     @enderror
-
                 </div>
             </div>
             <div>
@@ -57,8 +55,6 @@
                         {{ $message }}
                     </div>
                 @enderror
-
-
             </div>
             <button class="bg-[#5354FD] text-white font-bold tracking-wide uppercase px-8 py-3 rounded-[4px]
                     hover:bg-[#1f20a6] transition duration-300 ease-in-out w-full">
