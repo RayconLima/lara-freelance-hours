@@ -15,7 +15,7 @@
       <th scope="row" class="px-6 py-3">  
         Data de encerramento
       </th>
-      <th scope="row" class="px-6 py-3">  
+      <th scope="row" class="px-6 py-3 flex justify-center">  
         Status
       </th>
       <th scope="row" class="px-6 py-3">  
@@ -36,8 +36,8 @@
         <td class="px-6 py-4">
           {{ $project->created_at->diffForHumans() }}
         </td>
-        <td class="px-6 py-4">
-          {{ $project->status }}
+        <td class="px-8 py-4 whitespace-nowrap flex justify-center">
+          <x-projects.status :status="$project->status"/>
         </td>
         <td class="px-6 py-4">
           {{ $project->technologies->pluck('label')->implode(', ') }}
