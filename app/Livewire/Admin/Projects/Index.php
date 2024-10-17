@@ -19,6 +19,11 @@ class Index extends Component
         return view('livewire.admin.projects.index');
     }
 
+    public function show(Project $project)
+    {
+        return view('livewire.admin.projects.show', compact('project'));
+    }
+
     #[Computed()]
     public function projects()
     {
