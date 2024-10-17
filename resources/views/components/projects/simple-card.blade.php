@@ -46,7 +46,7 @@
                     {{ $project->author->name }}
                 </div>
                 <div class="flex items-center space-x-[4px]">
-                    @foreach(range(1, $project->author->stars) as $star)
+                    @foreach(range(1, $project->author->rating) as $rating)
                         <x-ui.icons.star class="h-[14px]"/>
                     @endforeach
                 </div>
