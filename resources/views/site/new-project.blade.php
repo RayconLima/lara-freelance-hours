@@ -18,7 +18,7 @@
 
                 <!-- Column 2: Image -->
                 <div class="flex justify-center">
-                    <img src="https://via.placeholder.com/500" alt="Imagem Login Necessário" class="rounded-lg shadow-md">
+                    <img src="/screenshots/new_project.png" alt="Formulário para cadastrar um novo projeto" class="rounded-lg shadow-md">
                 </div>
 
             </div>
