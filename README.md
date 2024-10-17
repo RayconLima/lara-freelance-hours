@@ -7,6 +7,22 @@
 ## Descrição
 FreelancerHours é uma plataforma web construída com PHP, Laravel e Livewire, que permite a freelancers oferecerem seus serviços de forma flexível. A plataforma facilita a criação de propostas personalizadas, nas quais os freelancers especificam o número de horas que podem dedicar a um determinado projeto, além de detalhar suas habilidades e experiência relevantes.
 
+## Interfaces do site
+<p align="left">
+  <img src="public/screenshots/announcing.png" alt="Imagem 1" width="20%" />
+  <img src="public/screenshots/projects.png" alt="Imagem 2" width="20%" />
+  <img src="public/screenshots/project.png" alt="Imagem 3" width="20%" />
+  <img src="public/screenshots/how_it_works.png" alt="Imagem 4" width="20%" />
+</p>
+
+## Interfaces do sistema de gerenciamento
+<p align="left">
+  <img src="public/screenshots/index_project_manager.png" alt="Imagem 1" width="20%" />
+  <img src="public/screenshots/create_project_manager.png" alt="Imagem 2" width="20%" />
+  <img src="public/screenshots/show_project_manager.png" alt="Imagem 3" width="20%" />
+  <img src="public/screenshots/index_user_manager.png" alt="Imagem 3" width="20%" />
+</p>
+
 ## O que foi utilizado
 Antes de começar a usar este projeto, é necessário ter o seguinte configurado em seu ambiente de desenvolvimento:
 
@@ -17,8 +33,10 @@ Antes de começar a usar este projeto, é necessário ter o seguinte configurado
 - Docker e Docker-Compose
 
 ## Funcionalidades
-- Projetos
-- Propostas por projeto
+- Enviando Propostas aos projetos
+- Gerenciamento de Projetos
+- Gerenciamento de Usuários
+- Gerenciamento de Perfil
 
 ## Atividades
 - [X]  - Fundamentos do PHP e do Laravel
@@ -26,7 +44,6 @@ Antes de começar a usar este projeto, é necessário ter o seguinte configurado
 - [X]  - Finalização da aplicação
 
 ## Instalação
-
 Siga as etapas abaixo para configurar o projeto em seu ambiente local:
 
 1. Clone este repositório para sua máquina local:
