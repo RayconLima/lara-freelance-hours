@@ -20,7 +20,7 @@ class Create extends Component
     #[Rule(['required', 'email'])]
     public string $email    = '';
     
-    #[Rule(['required', 'numeric', 'min:1'])]
+    #[Rule(['required', 'numeric', 'gt:0'])]
     public int $hours       = 0;
 
     public bool $agree      = false;
