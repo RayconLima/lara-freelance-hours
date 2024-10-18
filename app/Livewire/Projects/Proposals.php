@@ -24,7 +24,7 @@ class Proposals extends Component
     #[Computed()]
     public function lastProposalTime()
     {
-        return $this->project->proposals()->latest()->first()->created_at->diffForHumans();
+        return $this->project->proposals()->latest()->first()?->created_at?->diffForHumans();
     }
 
     public function loadMore()
